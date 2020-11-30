@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  width: 5rem;
+  height: 5rem;
+  border: solid 0.2rem #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* overflow: hidden; */
+}
+
+.burger {
+  width: 3rem;
+  height: 0.5rem;
+  background-color: #ffffff;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+.burger::after,
+.burger::before {
+  content: "";
+  width: 3rem;
+  height: 0.5rem;
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger::before {
+  transform: translateY(-1rem);
+}
+
+.burger::after {
+  transform: translateY(1rem);
+}
+
+.hero.open .burger {
+  transform: translateX(-5rem);
+  background: transparent;
+}
+
+.hero.open .burger::before {
+  transform: rotate(45deg) translate(3.5rem, -3.5rem);
+}
+
+.hero.open .burger::after {
+  transform: rotate(-45deg) translate(3.5rem, 3.5rem);
+}

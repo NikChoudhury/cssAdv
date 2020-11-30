@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .btn1,
+.hero .btn2,
+.hero .btn3 {
+  border: rebeccapurple solid 2px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: black;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.hero .btn4 {
+  border: rebeccapurple solid 2px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.hero .btn1:hover,
+.hero .btn2:hover,
+.hero .btn3:hover {
+  color: white;
+}
+
+.hero .btn4:hover {
+  color: black;
+}
+
+.hero .btn1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rebeccapurple;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.hero .btn2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rebeccapurple;
+  border-radius: 0 50% 50% 0;
+  z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.hero .btn3:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0%;
+  height: 0%;
+  border-radius: 50%;
+  background: rebeccapurple;
+  z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.hero .btn4:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  background: rebeccapurple;
+  z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.hero .btn1:hover::before {
+  height: 200%;
+}
+
+.hero .btn2:hover::before {
+  width: 180%;
+}
+
+.hero .btn3:hover::before {
+  width: 180%;
+  height: 180%;
+}
+
+.hero .btn4:hover::before {
+  width: 0;
+  height: 0;
+}
+/*# sourceMappingURL=main.css.map */
