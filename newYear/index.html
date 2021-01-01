@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Happy New Year</title>
+  </head>
+  <body>
+    <div class="hero">
+      <h1 class="text">
+        <span class="blink">H</span>
+        <span class="blink">a</span>
+        <span class="blink">p</span>
+        <span class="blink">p</span>
+        <span class="blink">y</span>
+        <span class="neon" data-text="New Year">New Year</span>
+      </h1>
+      <!-- <h2></h2> -->
+      <h1 class="numbers-group">
+        <span class="number">2</span>
+        <span class="number">0</span>
+        <span class="number">2</span>
+        <span class="number">1</span>
+      </h1>
+    </div>
+
+    <script>
+      function star() {
+        const count = 200;
+        const hero = document.querySelector(".hero");
+        let i = 0;
+        while (i < count) {
+          const star = document.createElement("i");
+          const x = Math.floor(Math.random() * window.innerWidth);
+          const y = Math.floor(Math.random() * window.innerHeight);
+
+          const size = Math.random() * 4;
+          star.style.left = x + "px";
+          star.style.top = y + "px";
+          star.style.width = 1 + size + "px";
+          star.style.height = 1 + size + "px";
+          star.style.zIndex = -Math.floor(Math.random() * 100);
+
+          const duration = Math.random() * 2;
+          star.style.animationDuration = 2 + duration + "s";
+          star.style.animationDelay = 2 + duration + "s";
+          let random = Math.floor(Math.random() * 10);
+
+          //   console.log(star);
+
+          hero.appendChild(star);
+          i++;
+        }
+      }
+      star();
+    </script>
+  </body>
+</html>
